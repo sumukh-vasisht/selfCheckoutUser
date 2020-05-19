@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Regster | Selfcheckout</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="registerbox">
+    <img src="../static/images/logo.jpg" class="avatar">
+    <br>
+        <h1>Sign-Up</h1>
+        <form action = "/" method="POST">
+            <p>Name</p>
+            <input type="text" name="name" placeholder="Enter your Name">
+            <p>Email ID</p>
+            <input type="text" name="email" placeholder="Enter your Email-ID">
+            <p>Phone Number</p>
+            <input type="text" name="phoneNumber" placeholder="Enter your Phone Number">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter the Password">
+            <p>Confirm Password</p>
+            <input type="password" name="password" placeholder="Re-Enter the Password">
+            <input type="submit" name="" value="Sign-Up">
+        </form>
+        <!-- {{ confirm }}<br> -->
+        <strong><a href="/guestLogin"><u style="font-size: 15px;color: black;">Login as Guest</u></a></strong>
+    </div>
+
+</body>
+
+</html>
