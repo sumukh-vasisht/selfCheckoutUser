@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+
 body{
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #222222;
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
+}
+
+body, html {
+    overflow: hidden;
 }
 
 .loginbox{
@@ -20,6 +26,7 @@ body{
     padding: 10% 10%;
     opacity: 0.8;
     box-shadow: 20px 20px 50px 15px black;
+    opacity: 80%;
 }
 
 .avatar{
@@ -70,6 +77,13 @@ h1{
     font-size: 18px;
     border-radius: 20px;
 }
+.loginbox input[type="checkbox"]
+{
+    /* background: #1112ae; */
+    color: black;
+    display: inline-block;
+    width: auto;
+}
 .loginbox input[type="submit"]:hover
 {
     cursor: pointer;
@@ -92,7 +106,7 @@ h1{
 
     .loginbox{
         width: 80%;
-        height: 60%;
+        height: 70%;
         background: white;
         color: #fff;
         top: 50%;
@@ -168,7 +182,18 @@ h1{
     .loginbox a:hover
     {
         color: #7171F4;
-    }
-    
-    
+    }    
 }
+
+.title {
+    color: #000;
+    margin-top: 10px;
+    padding-top: 20px;
+    /* padding-left: 20%; */
+    font-size: 20px;
+    text-align: center;
+}
+
+/*----------------------------------------------------------------*/
+
+

@@ -2,27 +2,32 @@
 <html>
 <head>
 <title>Login | Selfcheckout</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 
 <body>
     <div class="loginbox">
     <img src="../static/images/logo.jpg" class="avatar">
+    <br>
         <h1>Login</h1>
         <form action = "/" method="POST">
-            <p>Email ID</p>
-            <input type="text" name="username" placeholder="Enter theEmail ID">
-            <p>Password</p>
+            <label for="email"><p>Email</p></label>
+            <input type="text" name="email" placeholder="Enter theEmail ID">
+            <label for="pass"><p>Password</p></label>
             <input type="password" name="password" placeholder="Enter the Password">
+            <!-- <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe" style="font-size: 13px;color: black;">Remember me</label> -->
+            <!-- <input type="submit" name="" value="Login" onclick="lsRememberMe()"> -->
             <input type="submit" name="" value="Login">
             <p><a href=#>Forgot password?</a></p>
         </form>
         <!-- {{ confirm }}<br> -->
-        <a href="/register"><u>Don't have an account yet?</u></a><br>
-        <strong><a href="/guestLogin"><u style="font-size: 15px;color: black;">Login as Guest</u></a></strong>
+        <strong><a href="/register"><u>Don't have an account yet?</u></a><br></strong>
+        <strong><a href="/guestLogin"><u style="font-size: 15px;color: black;">Login as Guest</u></a></strong>  
+        <div class = "title"> 
+            <p>Self-Checkout</p> 
+        </div>   
     </div>
-
 </body>
-
 </html>
