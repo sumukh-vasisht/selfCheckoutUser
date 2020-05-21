@@ -9,15 +9,15 @@
 <body>
     <div class="loginbox">
         <img src="../static/images/logo.jpg" class="avatar">
-        <br>
+        <form action="/guestLogin" method="POST">
+            <br>
             <h1>Capture the QR Code</h1>
             <img src="../static/images/qr.png" class="qrimage">
             <button class="captureButton" onclick="document.getElementById('getFile').click()">Capture QR Code</button>
             <input type='file' id="getFile" name = "qrCode" accept="image/*" capture="environment" style="display:none">
-            <!-- <label class="scan">
-                <input type="file" name="image" accept="image/*" capture="environment">
-            </label>  -->
-        </div>
+            <input type="submit" name="signup-button" value="Submit">
+        </form>
+    </div>
 </body>
 
 </html>
