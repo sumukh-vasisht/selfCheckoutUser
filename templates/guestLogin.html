@@ -7,9 +7,17 @@
 </head>
 
 <body>
-    <label class=qrcode-text-btn>
-        <input type="file" name="image" accept="image/*" capture="environment">
-    </label>
+    <div class="loginbox">
+        <img src="../static/images/camera.png" class="avatar">
+        <br>
+            <h1>Capture the QR Code</h1>
+            <img src="../static/images/qr.png" class="qrimage">
+            <button class="captureButton" onclick="document.getElementById('getFile').click()">Capture QR Code</button>
+            <input type='file' id="getFile" name = "qrCode" accept="image/*" capture="environment" style="display:none">
+            <!-- <label class="scan">
+                <input type="file" name="image" accept="image/*" capture="environment">
+            </label>  -->
+        </div>
 </body>
 
 </html>
