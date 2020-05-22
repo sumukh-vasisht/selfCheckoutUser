@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>View Current Bill | Self-Checkout</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/viewCurrentBill.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/navBar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <!-- <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script> -->
+</head>
+
+
+<body>
+
+    <div class="navbar">
+        <a href = "/home" style="width: 50%;">Self-Checkout</a>
+        <a href="/home" class = "btn" style="width: 12.5%;"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="/viewAllBills" class = "btn" style="width: 12.5%;"><i class="fa fa-fw fa-money"></i> Upload</a> 
+        <a class = "btn" href="/contact" style="width: 12.5%;"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+        <a href="/" class = "btn" style="width: 12.5%;"><i class="fa fa-fw fa-user"></i> Logout</a>
+    </div>
+
+    <a class="title"><p><u>Current Bill</u></p></a>
+
+    <a class="date"><p>Date : 12-01-2020</p></a>
+
+    <table id="items">
+        <tr>
+            <th>Sl. No.</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Lays</td>
+            <td>2</td>
+            <td>10/-</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Lays</td>
+            <td>2</td>
+            <td>10/-</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Lays</td>
+            <td>2</td>
+            <td>10/-</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Lays</td>
+            <td>2</td>
+            <td>10/-</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Lays</td>
+            <td>2</td>
+            <td>10/-</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Lays</td>
+            <td>2</td>
+            <td>10/-</td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <table id="totalPrice">
+        <tr>
+            <th>Total Price</th>
+        </tr>
+        <tr>
+            <td>60/-</td>
+        </tr>
+    </table>
+
+    <div class = "payment"><p>Pay with : </p></div>
+    <button class="gpay">G-Pay</button>
+    <br/>
+    <button class="paytm">PayTM</button>
+
+    <!-- <footer> -->
+        <!-- <div class="search-text"> <div class="container"><div class="row text-center"><div class="form"><h4>SIGN UP FOR REGULAR UPDATES</h4><form id="search-form" class="form-search form-horizontal"><input type="text" class="input-search" placeholder="Email Address"><button type="submit" class="btn-search">SUBMIT</button></form></div></div></div></div> -->
+        <!-- <div class="copyright">
+            <div class="container">
+                <div class="row text-center">
+                    <p>Copyright © 2020 All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>  -->
+
+</body>
+</html>

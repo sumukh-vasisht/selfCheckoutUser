@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #222222;
+    /* background-size: cover; */
+    background-position: center;
+    font-family: 'Roboto';
+    text-align:center;
+    font-weight:300;
+    font-size:32px;
+    height:100vh;
+    /* overflow:hidden; */
+}
+
+.title p {
+    color: #222222;
+    font-size: 35px;
+}
+
+.date p {
+    color: #222222;
+    font-size: 17px;
+}
+
+.payment p{
+    color: #222222;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+.gpay {
+    background-image: url('../images/gpay.png'); 
+    background-position:left center;
+    background-repeat:no-repeat;
+    background-size: 20% 35px; 
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%; 
+    margin-bottom: 10px;
+    height: 40px; 
+    border: 1px solid #222222;
+    /* font-size: 2rem; */
+}
+
+.paytm {
+    background-image: url('../images/paytm.png'); 
+    background-position:left center;
+    background-repeat:no-repeat;
+    background-size: 20% 40px; 
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%; 
+    margin-bottom: 60px;
+    height: 40px; 
+    border: 1px solid #222222;
+    /* font-size: 2rem; */
+}
+
+#items {
+    font-family: "Roboto";
+    border-collapse: collapse;
+    width: 80%;
+    color: #222222;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+  
+#items td, #items th {
+    border: 1px solid #222222;
+    padding: 8px;
+    color: #222222;
+}
+  
+#items tr:nth-child(even){background-color: #f2f2f2;}
+  
+#items tr:hover {background-color: #ddd;}
+  
+#items th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #222222;
+    color: white;
+}
+
+#totalPrice {
+    font-family: "Roboto";
+    border-collapse: collapse;
+    width: 80%;
+    color: #222222;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#totalPrice th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #222222;
+    color: white;
+}
+
+#totalPrice td {
+    border: 1px solid #222222;
+    padding: 8px;
+    color: #222222;
+    text-align: center;
+}
+
+/*----------------------------GPAY-----------------------------------------*/
+
+
+
+
+
+
+  
+
+ 
+  

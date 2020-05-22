@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
 body{
     margin: 0;
@@ -6,27 +6,22 @@ body{
     background-color: #222222;
     background-size: cover;
     background-position: center;
-    font-family: sans-serif;
-}
-
-body, html {
-    overflow: hidden;
+    font-family: "Roboto";
 }
 
 .loginbox{
-    width: 80%;
-    height: 80%;
+    width: 320px;
+    height: 420px;
     background: white;
-    color: #fff;
+    color: #222222;
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
-    padding: 10% 10%;
+    padding: 70px 30px;
     opacity: 0.8;
     box-shadow: 20px 20px 50px 15px black;
-    opacity: 80%;
 }
 
 .avatar{
@@ -43,24 +38,26 @@ h1{
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
-    color: #000;
+    font-family: "Roboto";
 }
 
 .loginbox p{
     margin: 0;
     padding: 0;
-    color: black;
+    font-weight: bold;
+    font-family: "Roboto";
 }
 
 .loginbox input{
     width: 100%;
     margin-bottom: 20px;
+    font-family: "Roboto";
 }
 
 .loginbox input[type="text"], input[type="password"]
 {
-    border: 1px solid white;
-    border-bottom: 1px solid black;
+    border: none;
+    border-bottom: 1px solid #222222;
     background: transparent;
     outline: none;
     height: 40px;
@@ -72,128 +69,37 @@ h1{
     border: none;
     outline: none;
     height: 40px;
-    background: #1112ae;
+    background: #222222;
     color: #fff;
     font-size: 18px;
-    border-radius: 20px;
-}
-.loginbox input[type="checkbox"]
-{
-    /* background: #1112ae; */
-    color: black;
-    display: inline-block;
-    width: auto;
+    /* border-radius: 20px; */
+    font-family: "Roboto";
 }
 .loginbox input[type="submit"]:hover
 {
     cursor: pointer;
-    background: #7171F4;
+    border: 1px solid #222222;
+    background: transparent;
     color: #000;
 }
-.loginbox a{
+.loginbox .register{
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
     color: darkgrey;
+    font-family: "Roboto";
 }
 
-.loginbox a:hover
+.loginbox .register:hover
 {
     color: #7171F4;
 }
 
-@media screen and (max-width: 500px) {
-
-    .loginbox{
-        width: 80%;
-        height: 70%;
-        background: white;
-        color: #fff;
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%,-50%);
-        box-sizing: border-box;
-        padding: 10% 10%;
-        opacity: 0.8;
-        box-shadow: 20px 20px 50px 15px black;
-    }
-    
-    .avatar{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        position: absolute;
-        top: -50px;
-        left: calc(50% - 50px);
-    }
-    
-    h1{
-        margin: 0;
-        padding: 0 0 20px;
-        text-align: center;
-        font-size: 22px;
-    }
-    
-    .loginbox p{
-        margin: 0;
-        padding: 0;
-        color: black;
-    }
-    
-    .loginbox input{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .loginbox input[type="text"], input[type="password"]
-    {
-        border: 1px solid white;
-        border-bottom: 1px solid black;
-        background: transparent;
-        outline: none;
-        height: 40px;
-        font-size: 16px;
-        color: #000;
-    }
-    .loginbox input[type="submit"]
-    {
-        border: none;
-        outline: none;
-        height: 40px;
-        background: #1112ae;
-        color: #fff;
-        font-size: 18px;
-        border-radius: 20px;
-    }
-    .loginbox input[type="submit"]:hover
-    {
-        cursor: pointer;
-        background: #7171F4;
-        color: #000;
-    }
-    .loginbox a{
-        text-decoration: none;
-        font-size: 12px;
-        line-height: 20px;
-        color: darkgrey;
-    }
-    
-    .loginbox a:hover
-    {
-        color: #7171F4;
-    }    
+.loinbox .loginAsGuest {
+    font-size: 50px;
 }
 
-.title {
-    color: #000;
-    margin-top: 10px;
-    padding-top: 20px;
-    /* padding-left: 20%; */
-    font-size: 20px;
-    text-align: center;
+.loginbox .loginAsGuest:hover
+{
+    color: #7171F4;
 }
-
-/*----------------------------------------------------------------*/
-
-

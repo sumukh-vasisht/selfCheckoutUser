@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login | Selfcheckout</title>
+<title>Login | Self-Checkout</title>
     <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+    <script src="../static/js/login.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-
 <body>
     <div class="loginbox">
     <img src="../static/images/logo.jpg" class="avatar">
-    <br>
         <h1>Login</h1>
-        <form action = "/" method="POST">
-            <label for="email"><p>Email</p></label>
-            <input type="text" name="email" placeholder="Enter theEmail ID">
-            <label for="pass"><p>Password</p></label>
+        <span style="text-align: center;">{{message}}</span>
+        <form ... onsubmit="return checkForm(this);" method="POST">
+            <p>Email ID</p>
+            <input type="text" name="username" placeholder="Enter your Email ID">
+            <p>Password</p>
             <input type="password" name="password" placeholder="Enter the Password">
-            <!-- <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe" style="font-size: 13px;color: black;">Remember me</label> -->
-            <!-- <input type="submit" name="" value="Login" onclick="lsRememberMe()"> -->
-            <input type="submit" name="" value="Login">
-            <p><a href=#>Forgot password?</a></p>
+            <input type="submit" name="" value="Login" onclick="checkpassword()">
         </form>
-        <!-- {{ confirm }}<br> -->
-        <strong><a href="/register"><u>Don't have an account yet?</u></a><br></strong>
-        <strong><a href="/guestLogin"><u style="font-size: 15px;color: black;">Login as Guest</u></a></strong>  
-        <div class = "title"> 
-            <p>Self-Checkout</p> 
-        </div>   
+        
+        <a class="register" href="/register"><u>Don't have an account yet?</u></a>
+        <br/>
+        <a class="loginAsGuest" href="/guestLogin"><u><strong>Login as Guest</strong></u></a>
     </div>
+
 </body>
+</head>
 </html>

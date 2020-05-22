@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #222222;
+    /* background-size: cover; */
+    background-position: center;
+    font-family: 'Roboto';
+    text-align:center;
+    font-weight:300;
+    font-size:32px;
+    height:100vh;
+    /* overflow:hidden; */
+}
+
+.title p{
+    color: #222222;
+    font-size: 35px;
+}
+
+#bills {
+    font-family: "Roboto";
+    border-collapse: collapse;
+    width: 80%;
+    color: #222222;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+  
+#bills td, #bills th {
+    border: 1px solid #222222;
+    padding: 8px;
+    color: #222222;
+}
+  
+#bills tr:nth-child(even){background-color: #f2f2f2;}
+  
+#bills tr:hover {background-color: #ddd;}
+  
+#bills th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #222222;
+    color: white;
+}
+
+
+
+
+
+
+
+
+  
+
+ 
+  

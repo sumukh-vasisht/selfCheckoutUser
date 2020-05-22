@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../images/books4.png) no-repeat center;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.loginbox {
+    position: center;
+    margin-left: 10%;
+    width: 80%;
+    background-color: #222222;
+    opacity: 80%;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    height: auto;
+    overflow: auto;
+}
+
+.loginbox h1 {
+    padding-top: 5px;
+    font-weight: bolder;
+    padding-bottom: 30px;
+}
+
+.loginbox p{
+    /* margin: 0; */
+    padding: 0;
+    /* font-weight: bold; */
+    font-size: 21px;
+    text-align: left;
+    margin-left: 5%;
+}
+ 
+.loginbox input{
+    width: 90%;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+.loginbox input[type="text"]
+{
+    border: 19x solid black;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    /* height: 40px; */
+    color: #fff;
+    font-size: 16px;
+    border-radius: 2px;
+    height: 200px;
+    text-align: start;
+}
+
+.loginbox input[type="submit"]
+{
+    border: 1px solid white;
+    outline: none;
+    height: 40px;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: white;
+    color: #222222;
+    border: 1px solid #222222;
+}
+
+
+
+ 
+  
+
+
+  
+
+ 
+  
