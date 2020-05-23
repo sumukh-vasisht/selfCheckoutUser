@@ -4,6 +4,34 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
+import os
+import firebase_admin as firebase
+from firebase_admin import firestore
+import pyrebase
+import json
+
+#FOR FIRESTORE
+cred = firebase.credentials.Certificate("firebaseKey.json")
+firebase.initialize_app(cred)
+db = firestore.client()
+
+#FOR AUTH
+keyFile = open('pyrebaseKey.json','r')
+keyJson = keyFile.read()
+key = json.loads(keyJson)
+auth = pyrebase.initialize_app(key).auth()
+
+#FIRESTORE COMMANDS
+# db.collection('collectionName').document('documentID').set(data(as a dictionary)) -- To create/edit document
+# db.collection('collectionName').document('documentID').get() -- To get document
+# db.collection('collectionName').where('LHS','relational operator','RHS').stream() -- To get documents based on condition, eg .where('name','==','Varun'). to get all documents just remove the .where
+# db.collection('collectionName').order_by('name of field').limit('number of docs').stream() -- To limit the number of docs fetched or to order them. can also use along with .where
+# db.collection('collectionName').document('documentID').get().to_dict() -- To get document as dictionary (used most often)
+# db.collection('collectionName').document('documentID').delete() -- To delete document
+
+#AUTH COMMANDS
+# auth.create_user_with_email_and_password(email, password) -- Make a user
+# auth.sign_in_with_email_and_password(email, password) -- Sign in a user, returns a session key that expires in 60 mins I think.
 
 app = Flask(__name__)
 
