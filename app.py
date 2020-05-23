@@ -1,5 +1,18 @@
 from flask import Flask, request, render_template, redirect, url_for 
 import os
+import firebase_admin as firebase
+from firebase_admin import firestore
+
+cred = firebase.credentials.Certificate("firebaseKey.json")
+firebase.initialize_app(cred)
+db = firestore.client()
+
+# db.collection('collectionName').document('documentID').set(data(as a dictionary)) -- To create/edit document
+# db.collection('collectionName').document('documentID').get() -- To get document
+# db.collection('collectionName').where('LHS','relational operator','RHS').stream() -- To get documents based on condition, eg .where('name','==','Varun'). to get all documents just remove the .where
+# db.collection('collectionName').order_by('name of field').limit('number of docs').stream() -- To limit the number of docs fetched or to order them. can also use along with .where
+# db.collection('collectionName').document('documentID').get().to_dict() -- To get document as dictionary (used most often)
+# db.collection('collectionName').document('documentID').delete() -- To delete document
 
 app = Flask(__name__)
 
