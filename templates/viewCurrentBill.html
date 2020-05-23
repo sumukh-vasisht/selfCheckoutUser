@@ -19,16 +19,16 @@
 <body>
 
     <div class="navbar">
-        <a href = "/home" style="width: 50%;">Self-Checkout</a>
-        <a href="/home" class = "btn" style="width: 12.5%;"><i class="fa fa-fw fa-home"></i> Home</a> 
-        <a href="/viewAllBills" class = "btn" style="width: 12.5%;"><i class="fa fa-fw fa-money"></i> Upload</a> 
+        <a href = "/" style="width: 50%;">Self-Checkout</a>
+        <a href="/" class = "btn" style="width: 12.5%;"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="/viewAllBills" class = "btn" style="width: 12.5%;"><i class="fa fa-fw fa-money"></i> Bills</a> 
         <a class = "btn" href="/contact" style="width: 12.5%;"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
-        <a href="/" class = "btn" style="width: 12.5%;"><i class="fa fa-fw fa-user"></i> Logout</a>
+        <a href="/logout" class = "btn" style="width: 12.5%;"><i class="fa fa-fw fa-user"></i> Logout</a>
     </div>
 
     <a class="title"><p><u>Current Bill</u></p></a>
 
-    <a class="date"><p>Date : 12-01-2020</p></a>
+    <a class="date"><p>Date : {{date}}</p></a>
 
     <table id="items">
         <tr>
@@ -37,42 +37,14 @@
             <th>Quantity</th>
             <th>Price</th>
         </tr>
+        {% for i in range(leng) %}
         <tr>
-            <td>1</td>
-            <td>Lays</td>
-            <td>2</td>
-            <td>10/-</td>
+            <td> {{ i+1 }}</td>
+            <td> {{ items[i] }}</td>
+            <td> {{ quantity[i] }}</td>
+            <td> {{ prices[i] }}</td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Lays</td>
-            <td>2</td>
-            <td>10/-</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Lays</td>
-            <td>2</td>
-            <td>10/-</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Lays</td>
-            <td>2</td>
-            <td>10/-</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Lays</td>
-            <td>2</td>
-            <td>10/-</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Lays</td>
-            <td>2</td>
-            <td>10/-</td>
-        </tr>
+        {% endfor %}
     </table>
 
     <br/>
@@ -82,7 +54,7 @@
             <th>Total Price</th>
         </tr>
         <tr>
-            <td>60/-</td>
+            <td>{{totalPrice}}</td>
         </tr>
     </table>
 
