@@ -10,12 +10,22 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
+import os
 
 #FOR FIRESTORE
-cred = firebase.credentials.Certificate("firebaseKey.json")
-keyFile = open('pyrebaseKey.json','r')
-keyJson = keyFile.read()
-key = json.loads(keyJson)
+# cred = firebase.credentials.Certificate("firebaseKey.json")
+# keyFile = open('pyrebaseKey.json','r')
+# keyJson = keyFile.read()
+# key = json.loads(keyJson)
+
+if os.name == 'nt':
+    cred = firebase.credentials.Certificate("firebaseKey.json")
+    keyFile = open('pyrebaseKey.json','r')
+    keyJson = keyFile.read()
+    key = json.loads(keyJson)
+else:
+    cred = firebase.credentials.Certificate(json.loads(os.environ.get('FIREBASE')))
+    key = json.loads(os.environ.get('PYREBASE'))
 
 firebase.initialize_app(cred,{'storageBucket':'selfcheckout-8b125.appspot.com'})
 db = firestore.client() #For database
