@@ -40,3 +40,5 @@ uritemplate==3.0.1
 urllib3==1.25.9
 Werkzeug==1.0.1
 pyzbar==0.1.8
+opencv-python==4.1.2.30
+numpy==1.18.0
