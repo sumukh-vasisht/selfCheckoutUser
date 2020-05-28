@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guest | Selfcheckout</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/guestLogin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="loginbox">
+        <img src="../static/images/logo.jpg" class="avatar">
+        <form action="/guestLogin" method="POST" enctype = "multipart/form-data">
+            <br>
+            <h1>Capture the QR Code</h1>
+            <!-- <img src="../static/images/qr.png" class="qrimage"> -->
+            <button class="captureButton" onclick="document.getElementById('getFile').click()">Capture QR Code</button>
+            <input type='file' id="getFile" name = "file" accept="image/*" capture="environment" style="display:none">
+            <!-- <input type='file' id="getFile" name = "file" accept="image/*" capture="environment"> -->
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

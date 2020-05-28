@@ -11,6 +11,12 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 import os
+from datetime import date
+from pyzbar.pyzbar import decode, ZBarSymbol
+import cv2
+import numpy as np
+import random
+import string
 
 #FOR FIRESTORE
 # cred = firebase.credentials.Certificate("firebaseKey.json")
@@ -45,6 +51,7 @@ auth = pyrebase.initialize_app(key).auth() #For authentication
 # auth.sign_in_with_email_and_password(email, password) -- Sign in a user, returns a session key that expires in 60 mins I think.
 
 app = Flask(__name__)
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 app.secret_key = "(SHITTU_CANNOT_CODE)-1"
 
@@ -159,6 +166,25 @@ def register():
 
 @app.route('/guestLogin', methods=['GET', 'POST'])
 def guestLogin():
+    if request.method=="POST":
+        target = os.path.join(APP_ROOT, 'uploadFolder/')
+        if not os.path.isdir(target):
+            os.mkdir(target)
+        qrCode = request.files['file']
+        letters = string.ascii_lowercase
+        fileName=''.join(random.choice(letters) for i in range(10))
+        fileName=fileName+'.png'
+        destination = "/".join([target,fileName])
+        qrCode.save(destination)
+        img = cv2.imread('uploadFolder/temp1.png', cv2.IMREAD_GRAYSCALE)
+        codes = decode(img)
+        print('DECODED', codes[0][0].decode("utf-8"))
+        decoded = codes[0][0].decode("utf-8")
+        number=0
+        for i in decoded:
+            if i.isdigit():
+                number=i
+        return redirect(url_for('viewGuestBill', id=str(i)))
     return render_template("guestLogin.html")
 
 @app.route('/contact', methods=['GET','POST'])
@@ -274,6 +300,32 @@ def viewCurrentBillFromAllBills(id):
                         prices[int(z)-1]=value                        
         return render_template('viewCurrentBill.html',date=date, items=items, quantity=quantity, prices=prices, totalPrice=totalPrice, leng=len(items))
     return render_template("viewCurrentBill.html")
+
+@app.route('/viewGuestBill/<string:id>', methods=['GET','POST'])
+def viewGuestBill(id):
+    documentID = 'guest'+id
+    billDetails = db.collection('guests').document(documentID).get().to_dict()
+    date=billDetails['date']
+    totalPrice=billDetails['totalPrice']
+    number = len(billDetails)
+    numberOfItems = number-2        
+    items=['0' for i in range(numberOfItems//3)]
+    quantity=['0' for i in range(numberOfItems)]
+    prices=['0' for i in range(numberOfItems)]
+    for key,value in billDetails.items():
+        if 'item' in key:
+            for z in key:
+                if z.isdigit():
+                    items[int(z)-1]=value
+        elif 'quantity' in key:
+            for z in key:
+                if z.isdigit():
+                    quantity[int(z)-1]=value
+        elif 'price' in key:
+            for z in key:
+                if z.isdigit():
+                    prices[int(z)-1]=value                        
+    return render_template('viewCurrentBill.html',date=date, items=items, quantity=quantity, prices=prices, totalPrice=totalPrice, leng=len(items))
 
 @app.route('/viewAllBills', methods=['GET','POST'])
 def viewAllBills():
