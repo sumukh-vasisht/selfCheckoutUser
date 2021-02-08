@@ -41,7 +41,7 @@ Werkzeug==0.16.0
 widgetsnbextension==3.5.1
 wrapt==1.11.2
 zipp==3.1.0
-httplib2==0.17.4
+httplib2==0.19.0
 idna==2.9
 itsdangerous==1.1.0
 Jinja2==2.11.2
